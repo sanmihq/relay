@@ -30,9 +30,9 @@ export default function FeaturesSection() {
           return (
             <div
               key={id}
-              className="flex flex-1 flex-col items-start gap-2 rounded border border-gray-800 bg-[#090f20] p-6 text-start"
+              className="flex flex-1 flex-col items-start gap-2 rounded border border-gray-200 dark:border-gray-800 dark:bg-[#090f20] p-6 text-start"
             >
-              <div className="mb-2 flex size-10 items-center justify-center rounded-full bg-[#151737]">
+              <div className="mb-2 flex size-10 items-center justify-center rounded-full dark:bg-[#151737]">
                 <Icon size={24} strokeWidth={1.7} color="#6e4adb" />
               </div>
               <h3 className="text-md font-semibold">{feature.title}</h3>

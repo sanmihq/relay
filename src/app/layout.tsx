@@ -5,6 +5,7 @@ import { appConfig } from "@/config/appConfig";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { Providers } from "./provider";
 
 export const metadata: Metadata = {
   title: appConfig.title,
@@ -19,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fonts.bricolage.className} bg-[#f8fafc] antialiased dark:bg-[#020617]`}
+        className={`${fonts.bricolage.className} ${fonts.spaceMono.variable} bg-[#f8fafc] antialiased dark:bg-[#020617]`}
       >
-        <ThemeProvider>
-          <Header/>
+        <Providers>
+          <Header />
           <main>{children}</main>
           <Footer />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
