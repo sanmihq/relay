@@ -1,14 +1,14 @@
-import { appConfig } from '@/config/appConfig'
-import React from 'react'
-import ThemeToggle from './ThemeToggle'
+import { appConfig } from "@/config/appConfig";
+import React from "react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Header() {
   return (
     <header>
-        <div className='flex items-center justify-between p-4 max-w-5xl mx-auto'>
-            <span className='font-bold text-xl'>{appConfig.name}</span>
-            <ThemeToggle/>
-        </div>
+      <div className="mx-auto flex max-w-5xl items-center justify-between p-4">
+        <span className="text-xl font-bold">{appConfig.name}</span>
+        <ThemeSwitcher />
+      </div>
     </header>
-  )
+  );
 }

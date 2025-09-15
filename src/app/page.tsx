@@ -1,10 +1,12 @@
 "use client";
 
+import { Button, useDisclosure } from "@heroui/react";
 import { Plus } from "lucide-react";
 import FeaturesSection from "./components/FeaturesSection";
-import { Button, useDisclosure } from "@heroui/react";
 import CreateRoomModal from "./components/CreateRoomModal";
 import JoinRoomModal from "./components/JoinRoomModal";
+import fonts from "@/fonts/fonts";
+import { Icon } from "./components/Icon";
 
 export default function Home() {
   const {
@@ -22,14 +24,19 @@ export default function Home() {
   return (
     <div className="grid h-screen place-items-center text-center">
       <div className="flex flex-col items-center">
-        <h1 className="text-7xl font-black">Relay</h1>
-        <p className="text-md mt-4 w-xl text-black/70 dark:text-white/70">
+        <h1
+          className={` text-7xl font-black tracking-tight`}
+        >
+          Relay
+        </h1>
+        <p className={`text-md mt-4 w-xl text-black/70 dark:text-white/70`}>
           Seamlessly share your clipboard across devices. Instant, private, and
           ridiculously simple.
         </p>
+
         <div className="mt-6 flex items-center justify-center gap-4">
           <Button
-            startContent={<Plus size={18} />}
+            startContent={<Icon icon={Plus} size={18} />}
             radius="full"
             color="secondary"
             size="lg"

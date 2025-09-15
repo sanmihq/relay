@@ -1,4 +1,8 @@
+"use client";
+
 import { MonitorSmartphone, ShieldCheck, Zap } from "lucide-react";
+import fonts from "@/fonts/fonts";
+import { Icon } from "./Icon";
 
 export default function FeaturesSection() {
   const features = [
@@ -24,24 +28,21 @@ export default function FeaturesSection() {
 
   return (
     <section>
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-stretch">
-        {features.map((feature, id) => {
-          const Icon = feature.icon;
-          return (
-            <div
-              key={id}
-              className="flex flex-1 flex-col items-start gap-2 rounded border border-gray-200 dark:border-gray-800 dark:bg-[#090f20] p-6 text-start"
-            >
-              <div className="mb-2 flex size-10 items-center justify-center rounded-full dark:bg-[#151737]">
-                <Icon size={24} strokeWidth={1.7} color="#6e4adb" />
-              </div>
-              <h3 className="text-md font-semibold">{feature.title}</h3>
-              <p className="text-sm text-black/70 dark:text-white/70">
-                {feature.description}
-              </p>
+      <div className="mx-auto mt-16 flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-stretch">
+        {features.map((f, i) => (
+          <div
+            key={i}
+            className="flex flex-1 flex-col items-start gap-2 rounded border border-gray-200 p-6 text-start dark:border-gray-800 dark:bg-[#090f20]"
+          >
+            <div className="mb-2 flex size-10 items-center justify-center rounded-full dark:bg-[#151737]">
+              <Icon icon={f.icon} size={24} strokeWidth={1.7} color="#6e4adb" />
             </div>
-          );
-        })}
+            <h3 className="text-md font-semibold">{f.title}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">
+              {f.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

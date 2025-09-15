@@ -2,6 +2,7 @@ import {
   Bricolage_Grotesque,
   Geist,
   Geist_Mono,
+  Space_Grotesk,
   Space_Mono,
 } from "next/font/google";
 
@@ -41,10 +42,20 @@ const spaceMono = Space_Mono({
   adjustFontFallback: false,
 });
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-spaceGrotesk",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  preload: true,
+  adjustFontFallback: false,
+});
+
 const fonts = {
   bricolage,
   geist,
   geistMono,
   spaceMono,
+  spaceGrotesk,
 };
 export default fonts;
